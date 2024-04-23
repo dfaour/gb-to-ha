@@ -1,7 +1,7 @@
 # gb-to-ha
 Converts GreenButton XML files (as prepared by Nova Scotia Power) to a CSV format importable to Home Assistant (homeassistant-statistics).
 
-It will keep track of the most recently imported data and on subsequent runs, will only put new data into the output CSV file.
+It will keep track of the most recently imported data and on subsequent runs, will only put more recent data into the output CSV file.
 
 For instructions on how to then import the generated file into Home Assistant, please see klausj1's excellent integration: https://github.com/klausj1/homeassistant-statistics
 
