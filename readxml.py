@@ -9,16 +9,15 @@ from bs4 import BeautifulSoup
 import datetime
 import os
 
+sensor = "sensor.nspower_energy_wh" #rename with your Home Assistant entity
+
+units = "kWh"
+
 #TSV/CSV column headers:
 headers = ["statistic_id","unit","start","sum","state"]
 delimiter = "\t" #either "\t" for tab separated values, or "," for comma separated value
-
-lastdata = "latest.csv" #data file to store most recently imported data (so only new data is imported each time)
-
+lastdata = "latest.csv" #data file to store most recently imported data (so only new data is imported each time) (this file will be created if it doesn't exist)
 header = delimiter.join(headers) + "\n" #join it all together
-
-sensor = "sensor.nspower_energy_wh" #rename with your Home Assistant entity
-units = "kWh"
 
 if len(sys.argv) < 3:
     print("Usage: python readxml.py INPUTFILE.xml OUTPUTFILE.csv")
